@@ -9,6 +9,16 @@ public class Person {
         address = paramAddress;
     }
 
+    Person(String paramName){
+        // memanggil constructor lain
+        this(paramName, null);
+    }
+
+
+    Person(){
+    }
+
+
     void sayHello(String paramName){
         System.out.println("Hello "+ paramName + ", My name is "+ name);
     }
