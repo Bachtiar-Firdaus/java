@@ -26,6 +26,7 @@ public class Person {
     // sample parameter shadowing
     void sayShadow(String name){
         // karna nama variable sama mengakibatkan akses varible terbatas pada block terdekat
-        System.out.println("Hello "+ name + ", My name is "+ name);
+        // this. di gunakan untuk me resolve parameter shadowing
+        System.out.println("Hello "+ name + ", My name is "+ this.name);
     }
 }

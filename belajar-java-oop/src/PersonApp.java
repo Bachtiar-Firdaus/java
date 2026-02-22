@@ -20,5 +20,8 @@ public class PersonApp {
         person3.name = "Diki";
         person3.sayHello("Daus");
 
+        person1.sayShadow("Bachtiar Firdaus");
+
+
     }
 }
