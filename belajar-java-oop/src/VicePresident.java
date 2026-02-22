@@ -1,5 +1,10 @@
 // cara mewariskan dengan extend target induk
 class VicePresident extends Manager{
+
+    VicePresident(String name){
+        super(name);
+    }
+
     // mendeklarasikan ulang padahal di parent sudah ada
     // ini di namakan method overidding
     void sayHello(String name){
