@@ -22,4 +22,10 @@ public class Person {
     void sayHello(String paramName){
         System.out.println("Hello "+ paramName + ", My name is "+ name);
     }
+
+    // sample parameter shadowing
+    void sayShadow(String name){
+        // karna nama variable sama mengakibatkan akses varible terbatas pada block terdekat
+        System.out.println("Hello "+ name + ", My name is "+ name);
+    }
 }
