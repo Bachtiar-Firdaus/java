@@ -10,10 +10,15 @@ public class PersonApp {
         System.out.println(person1.address);
         System.out.println(person1.country);
 
+        person1.sayHello("Firdaus");
+
 
         Person person2 = new Person();
+
         Person person3;
         person3 = new Person();
+        person3.name = "Diki";
+        person3.sayHello("Daus");
 
     }
 }
