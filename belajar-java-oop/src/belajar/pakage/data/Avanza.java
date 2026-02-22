@@ -16,4 +16,5 @@ public class Avanza implements Car{
     public boolean isMaintenance() {
         return false;
     }
+
 }
