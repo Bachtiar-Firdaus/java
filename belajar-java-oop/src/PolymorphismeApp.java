@@ -18,7 +18,19 @@ public class PolymorphismeApp {
         sayHello(new VicePresident("dayat"));
 
     }
+
+    // proses pengecekan dan konversi
+    // type check and cast
     static void sayHello(Employee employee){
-        System.out.println("Hello "+ employee.name);
+        if(employee instanceof VicePresident) {
+            VicePresident vicePresident = (VicePresident) employee;
+            System.out.println("Hello " + vicePresident.name);
+        }else if(employee instanceof Manager) {
+            Manager manager = (Manager) employee;
+            System.out.println("Hello " + manager.name);
+        }else{
+            System.out.println("Hello " + employee.name);
+        }
+
     }
 }
