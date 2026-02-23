@@ -15,6 +15,13 @@ public class Product {
         return  "Product name: "+ name + " , price "+ price;
     }
 
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(name);
+        result = 31 * result + price;
+        return result;
+    }
+
     // ini di generate otomatis code.generate.equals()andhashcode()
     @Override
     public boolean equals(Object o) {

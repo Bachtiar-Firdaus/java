@@ -10,5 +10,6 @@ public class ProductApp {
 
         Product product2 = new Product("Lenove Legion 71", 36_000_000);
         System.out.println(product.equals(product2));
+        System.out.println(product.hashCode() == product2.hashCode());
     }
 }
