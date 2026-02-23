@@ -13,7 +13,7 @@ public class CompanyApp {
 
         System.out.println(employee.getName());
         System.out.println(employee.getCompany());
-        
+
         Company company2 = new Company();
         company2.setName("testing company");
 
