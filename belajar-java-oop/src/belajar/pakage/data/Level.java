@@ -1,5 +1,9 @@
 package belajar.pakage.data;
 
+import belajar.pakage.annotation.Fancy;
+
+@Fancy(name = "Car", tags = {"app", "java"})
+
 public enum Level {
     STANDARD("standard level"),
     PREMIUM("premium level"),
