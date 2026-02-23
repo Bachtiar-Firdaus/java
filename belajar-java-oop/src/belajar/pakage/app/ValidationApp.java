@@ -16,5 +16,9 @@ public class ValidationApp {
         } finally {
             System.out.println("Error Gak Error, Tetep Di Panggil");
         }
+
+        LoginRequest loginRequest2 = new LoginRequest(null,null);
+        ValidationUtil.validateRuntime(loginRequest2);
+        System.out.println("sukses");
     }
 }
