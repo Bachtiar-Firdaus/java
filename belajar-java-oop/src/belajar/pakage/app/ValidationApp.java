@@ -1,0 +1,20 @@
+package belajar.pakage.app;
+
+import belajar.pakage.data.LoginRequest;
+import belajar.pakage.error.ValidationExceptions;
+import belajar.pakage.util.ValidationUtil;
+
+public class ValidationApp {
+    static void main(String[] args) {
+        LoginRequest loginRequest = new LoginRequest("", "rahasia");
+
+        try{
+            ValidationUtil.validate(loginRequest);
+            System.out.println("Data Valid");
+        } catch (ValidationExceptions | NullPointerException e) {
+            System.out.println("Data Tidak Valid : " + e.getMessage());
+        } finally {
+            System.out.println("Error Gak Error, Tetep Di Panggil");
+        }
+    }
+}
