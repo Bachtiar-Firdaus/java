@@ -8,7 +8,8 @@ import view.TodoListView;
 
 public class TodoListViewTest {
     static void main(String[] args) {
-        testShowTodoList();
+//        testShowTodoList();
+        testAddTodoList();
     }
 
     public static void testShowTodoList(){
@@ -21,5 +22,16 @@ public class TodoListViewTest {
         todoListService.addTodoList("Belajar Java SpringBoot");
 
         todoListView.showTodoList();
+    }
+
+
+    public static void testAddTodoList(){
+        TodoListRepository todoListRepository = new TodoListRepositoryImpl();
+        TodoListService todoListService = new TodoListServiceImpl(todoListRepository);
+        TodoListView todoListView = new TodoListView(todoListService);
+
+        todoListView.addTodoList();
+        todoListService.showTodoList();
+        todoListView.addTodoList();
     }
 }
