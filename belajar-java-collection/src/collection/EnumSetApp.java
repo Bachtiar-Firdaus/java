@@ -14,7 +14,7 @@ public class EnumSetApp {
 
         // ini untuk selected enum
         EnumSet<Gender> genders = EnumSet.of(Gender.MALE, Gender.NOT_MENTION);
-        
+
         for(var val : genders){
             System.out.println(val);
         }
