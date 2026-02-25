@@ -27,4 +27,12 @@ public class Person {
         // ini jika list bisa di ubah
 //        return hobbies;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
