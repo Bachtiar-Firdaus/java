@@ -7,3 +7,10 @@ maven-archetype-quickstart
 'artifactId': belajar-apache-maven
 1.0-SNAPSHOT: 
 belajar-java-maven: maven
+
+
+
+mvn clean
+mvn compile
+mvn test-compile
+mvn test
