@@ -14,3 +14,6 @@ mvn clean
 mvn compile
 mvn test-compile
 mvn test
+mvn clean compile test package
+
+java -jar target/belajar-apache-maven-1.0-SNAPSHOT.jar
