@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="belajar.java.test.CalculatorTest" time="0.021" tests="6" errors="0" skipped="3" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="belajar.java.test.ConditionTest" time="0.005" tests="11" errors="0" skipped="5" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -59,27 +59,25 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testAborted" classname="belajar.java.test.CalculatorTest" time="0">
-    <skipped message="Test dibatalkan karna bukan dev" type="org.opentest4j.TestAbortedException">org.opentest4j.TestAbortedException: Test dibatalkan karna bukan dev
-	at belajar.java.test.CalculatorTest.testAborted(CalculatorTest.java:70)
-</skipped>
-    <system-out><![CDATA[Before All
-Before Each
-After Each
-]]></system-out>
+  <testcase name="testDisabledJavaVendorOracle" classname="belajar.java.test.ConditionTest" time="0">
+    <skipped message="System property [java.vendor] with value [Oracle Corporation] matches regular expression [Oracle Corporation]"/>
   </testcase>
-  <testcase name="testDivideFailed" classname="belajar.java.test.CalculatorTest" time="0.002"/>
-  <testcase name="testAddSuccess" classname="belajar.java.test.CalculatorTest" time="0"/>
-  <testcase name="testCommingSoon" classname="belajar.java.test.CalculatorTest" time="0">
-    <skipped message="public void belajar.java.test.CalculatorTest.testCommingSoon() is @Disabled"/>
+  <testcase name="testSystemProperties" classname="belajar.java.test.ConditionTest" time="0.004"/>
+  <testcase name="testEnabledOnProfileDev" classname="belajar.java.test.ConditionTest" time="0">
+    <skipped message="Environment variable [PROFILE] does not exist"/>
   </testcase>
-  <testcase name="testAssumptions" classname="belajar.java.test.CalculatorTest" time="0">
-    <skipped message="Assumption failed: assumption is not true" type="org.opentest4j.TestAbortedException">org.opentest4j.TestAbortedException: Assumption failed: assumption is not true
-	at belajar.java.test.CalculatorTest.testAssumptions(CalculatorTest.java:76)
-</skipped>
-    <system-out><![CDATA[Before Each
-After Each
-]]></system-out>
+  <testcase name="testDisabledOnJava8" classname="belajar.java.test.ConditionTest" time="0"/>
+  <testcase name="testEnableOnWindows" classname="belajar.java.test.ConditionTest" time="0"/>
+  <testcase name="testDisabledOnWindows" classname="belajar.java.test.ConditionTest" time="0">
+    <skipped message="Disabled on operating system: Windows 11"/>
   </testcase>
-  <testcase name="testDivideSuccess" classname="belajar.java.test.CalculatorTest" time="0"/>
+  <testcase name="testDisabledOnJava11to16" classname="belajar.java.test.ConditionTest" time="0"/>
+  <testcase name="testEnableOnJava8" classname="belajar.java.test.ConditionTest" time="0">
+    <skipped message="Disabled on JRE version: 25.0.2"/>
+  </testcase>
+  <testcase name="testEnabledJavaVendorOracle" classname="belajar.java.test.ConditionTest" time="0"/>
+  <testcase name="testDisabledOnProfileDev" classname="belajar.java.test.ConditionTest" time="0"/>
+  <testcase name="testEnableOnJava15to16" classname="belajar.java.test.ConditionTest" time="0">
+    <skipped message="Disabled on JRE version: 25.0.2"/>
+  </testcase>
 </testsuite>

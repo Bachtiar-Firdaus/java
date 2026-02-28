@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: belajar.java.test.CalculatorTest
+Test set: belajar.java.test.ConditionTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.021 s - in belajar.java.test.CalculatorTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0.005 s - in belajar.java.test.ConditionTest
