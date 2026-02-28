@@ -17,7 +17,11 @@ mvn test
 mvn clean compile test package
 
 java -jar target/belajar-apache-maven-1.0-SNAPSHOT.jar
+java -jar target/belajar-apache-maven-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 
 https://search.maven.org/
 https://mvnrepository.com/
+
+
+mvn clean package assembly:single
