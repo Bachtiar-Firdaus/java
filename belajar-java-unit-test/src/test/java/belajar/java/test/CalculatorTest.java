@@ -2,6 +2,7 @@ package belajar.java.test;
 
 import belajar.java.test.generator.SimpleDisplayNameGenerator;
 import org.junit.jupiter.api.*;
+import org.opentest4j.TestAbortedException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,10 +31,7 @@ public class CalculatorTest {
         System.out.println("After Each");
     }
 
-
-
-
-
+    
 
     @Test
 //    @DisplayName("Test Skenario Sukses untuk method add(integer, integer)")
@@ -63,4 +61,13 @@ public class CalculatorTest {
     @Disabled
     public void testCommingSoon(){
     }
+
+    @Test
+    public void testAborted(){
+        var profile = System.getenv("PROFILE");
+        if(!"DEV".equals(profile)){
+            throw new TestAbortedException("Test dibatalkan karna bukan dev");
+        }
+    }
+
 }
