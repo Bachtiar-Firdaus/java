@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 import org.opentest4j.TestAbortedException;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.*;
 
 @DisplayNameGeneration(SimpleDisplayNameGenerator.class)
 //@DisplayName("Test Untuk Calculator Class")
@@ -31,7 +32,7 @@ public class CalculatorTest {
         System.out.println("After Each");
     }
 
-    
+
 
     @Test
 //    @DisplayName("Test Skenario Sukses untuk method add(integer, integer)")
@@ -70,4 +71,8 @@ public class CalculatorTest {
         }
     }
 
+    @Test
+    public void testAssumptions(){
+        assumeTrue("DEV".equals(System.getenv("PROFILE")));
+    }
 }
