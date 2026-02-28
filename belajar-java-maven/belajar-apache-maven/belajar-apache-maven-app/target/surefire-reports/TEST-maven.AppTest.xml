@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="maven.AppTest" time="0.012" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="maven.AppTest" time="0.013" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-app\target\test-classes;D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-app\target\classes;D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-data\target\belajar-apache-maven-data-1.0-SNAPSHOT.jar;C:\Users\Bachtiar F\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Bachtiar F\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Bachtiar F\.m2\repository\com\google\code\gson\gson\2.13.2\gson-2.13.2.jar;C:\Users\Bachtiar F\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;"/>
+    <property name="java.class.path" value="D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-app\target\test-classes;D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-app\target\classes;D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-data\target\belajar-apache-maven-data-1.0-SNAPSHOT.jar;C:\Users\Bachtiar F\.m2\repository\com\google\code\gson\gson\2.13.2\gson-2.13.2.jar;C:\Users\Bachtiar F\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\Bachtiar F\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Bachtiar F\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ID"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\BACHTI~1\AppData\Local\Temp\surefire7381379773956546864\surefirebooter18425266215742171892.jar C:\Users\Bachtiar F\AppData\Local\Temp\surefire7381379773956546864 2026-02-28T10-49-35_768-jvmRun1 surefire3283222620287853550tmp surefire_08000645809832925857tmp"/>
+    <property name="sun.java.command" value="C:\Users\BACHTI~1\AppData\Local\Temp\surefire7278203082239489062\surefirebooter14130807761216252101.jar C:\Users\Bachtiar F\AppData\Local\Temp\surefire7278203082239489062 2026-02-28T10-58-53_843-jvmRun1 surefire235547941479178050tmp surefire_05104567501663802038tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-app\target\test-classes;D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-app\target\classes;D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-data\target\belajar-apache-maven-data-1.0-SNAPSHOT.jar;C:\Users\Bachtiar F\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Bachtiar F\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Bachtiar F\.m2\repository\com\google\code\gson\gson\2.13.2\gson-2.13.2.jar;C:\Users\Bachtiar F\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;"/>
+    <property name="surefire.test.class.path" value="D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-app\target\test-classes;D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-app\target\classes;D:\udemy\java\belajar-java-maven\belajar-apache-maven\belajar-apache-maven-data\target\belajar-apache-maven-data-1.0-SNAPSHOT.jar;C:\Users\Bachtiar F\.m2\repository\com\google\code\gson\gson\2.13.2\gson-2.13.2.jar;C:\Users\Bachtiar F\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\Bachtiar F\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Bachtiar F\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Bachtiar F"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\BACHTI~1\AppData\Local\Temp\surefire7381379773956546864\surefirebooter18425266215742171892.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\BACHTI~1\AppData\Local\Temp\surefire7278203082239489062\surefirebooter14130807761216252101.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.2+10-LTS-69"/>
