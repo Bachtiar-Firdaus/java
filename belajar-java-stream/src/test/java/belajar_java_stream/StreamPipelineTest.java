@@ -24,7 +24,7 @@ public class StreamPipelineTest {
     @Test
     void testCreateStreamPipelineOk(){
         List<String> list = List.of("bach","tiar","fir","daus");
-        
+
         list.stream()
                 .map(name -> name.toUpperCase())
                 .map(upper -> "MR. " + upper)
