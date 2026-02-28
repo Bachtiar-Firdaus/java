@@ -14,7 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @Extensions({
         @ExtendWith(MockitoExtension.class)
 })
-public class PersonServiceClass {
+public class PersonServiceTest {
 
     @Mock
     private PersonRepository personRepository;
@@ -46,4 +46,14 @@ public class PersonServiceClass {
         Assertions.assertEquals("Daus",person.getName());
     }
 
+    @Test
+    void testRegisterSuccess(){
+        var person = personService.register("Daus");
+        Assertions.assertNotNull(person);
+        Assertions.assertEquals("Daus", person.getName());
+        Assertions.assertNotNull(person.getId());
+
+        Mockito.verify(personRepository, Mockito.times(1))
+                .insert(new Person(person.getId(), "Daus"));
+    }
 }

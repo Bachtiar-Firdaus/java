@@ -3,6 +3,8 @@ package belajar.java.test.service;
 import belajar.java.test.data.Person;
 import belajar.java.test.repository.PersonRepository;
 
+import java.util.UUID;
+
 public class PersonService {
 
     private PersonRepository personRepository;
@@ -22,4 +24,9 @@ public class PersonService {
 
     }
 
+    public Person register(String name){
+        var person = new Person(UUID.randomUUID().toString(), name);
+        personRepository.insert(person);
+        return person;
+    }
 }
