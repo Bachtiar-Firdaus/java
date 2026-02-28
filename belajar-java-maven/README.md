@@ -25,3 +25,4 @@ https://mvnrepository.com/
 
 
 mvn clean package assembly:single
+java -jar belajar-apache-maven-app/target/belajar-apache-maven-app-1.0-SNAPSHOT-jar-with-dependencies.jar
