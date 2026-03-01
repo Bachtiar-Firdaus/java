@@ -15,3 +15,15 @@ CREATE TABLE customers
     CONSTRAINT email_unique UNIQUE (email),
     PRIMARY KEY (id)
 ) ENGINE = InnoDB;
+
+INSERT INTO customers (id, name, email) VALUES
+('C001', 'Bachtiar F', 'bachtiar.f@example.com'),
+('C002', 'Budi Santoso', 'budi.s@example.com'),
+('C003', 'Siti Aminah', 'siti.a@example.com'),
+('C004', 'Andi Wijaya', 'andi.w@example.com'),
+('C005', 'Dewi Lestari', 'dewi.l@example.com'),
+('C006', 'Rian Hidayat', 'rian.h@example.com'),
+('C007', 'Eka Saputra', 'eka.s@example.com'),
+('C008', 'Maya Indah', 'maya.i@example.com'),
+('C009', 'Fajar Ramadhan', 'fajar.r@example.com'),
+('C010', 'Gita Permata', 'gita.p@example.com');
