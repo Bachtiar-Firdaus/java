@@ -27,3 +27,12 @@ INSERT INTO customers (id, name, email) VALUES
 ('C008', 'Maya Indah', 'maya.i@example.com'),
 ('C009', 'Fajar Ramadhan', 'fajar.r@example.com'),
 ('C010', 'Gita Permata', 'gita.p@example.com');
+
+CREATE TABLE admin
+(
+    username    VARCHAR(100) NOT NULL,
+    PASSWORD    VARCHAR(100) NOT NULL,
+    PRIMARY KEY (username)
+) ENGINE = INNODB;
+
+INSERT INTO admin (username, PASSWORD) VALUES ("admin","admin");
