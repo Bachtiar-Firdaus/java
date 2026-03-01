@@ -36,3 +36,11 @@ CREATE TABLE admin
 ) ENGINE = INNODB;
 
 INSERT INTO admin (username, PASSWORD) VALUES ("admin","admin");
+
+CREATE TABLE comments
+(
+    id  INT NOT NULL AUTO_INCREMENT,
+    email    VARCHAR(100),
+    COMMENT TEXT,
+    PRIMARY KEY (id)
+) ENGINE = INNODB;
