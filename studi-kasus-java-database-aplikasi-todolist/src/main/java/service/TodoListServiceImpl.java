@@ -14,15 +14,9 @@ public class TodoListServiceImpl implements TodoListService {
     @Override
     public void showTodoList() {
         TodoList[] model = todoListRepository.getAll();
-
         System.out.println("TODO LIST");
-        for (var i = 0; i < model.length; i++){
-            var todoList = model[i];
-            var no = i + 1;
-
-            if (todoList != null){
-                System.out.println(no + ". " + todoList.getTodo());
-            }
+        for(var todolist : model){
+            System.out.println(todolist.getId() + " : " + todolist.getTodo());
         }
     }
 
