@@ -18,4 +18,16 @@ public class LocalTest {
         System.out.println(local.getDisplayLanguage());
         System.out.println(local.getDisplayCountry());
     }
+    @Test
+    void testNewLocalUs(){
+        var language = "en";
+        var country = "US";
+        var local = new Locale(language, country);
+
+        System.out.println(local.getLanguage());
+        System.out.println(local.getCountry());
+
+        System.out.println(local.getDisplayLanguage());
+        System.out.println(local.getDisplayCountry());
+    }
 }
