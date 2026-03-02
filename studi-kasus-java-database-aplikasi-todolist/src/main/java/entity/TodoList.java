@@ -3,6 +3,8 @@ package entity;
 public class TodoList {
     private String todo;
 
+    private Integer id;
+
     public TodoList() {
     }
 
@@ -16,5 +18,13 @@ public class TodoList {
 
     public void setTodo(String todo) {
         this.todo = todo;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
