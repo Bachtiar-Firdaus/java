@@ -8,6 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        var name = Thread.currentThread().getName();
+        System.out.println(name);
     }
 }

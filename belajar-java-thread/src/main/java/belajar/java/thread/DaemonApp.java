@@ -1,0 +1,19 @@
+package belajar.java.thread;
+
+public class DaemonApp {
+
+    static void main(String[] args) {
+        var thread = new Thread(() -> {
+            try {
+                Thread.sleep(3000);
+                System.out.println("Run Thread");
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        });
+        thread.setDaemon(true);
+        thread.start();
+    }
+
+
+}
