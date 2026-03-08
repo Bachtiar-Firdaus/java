@@ -3,6 +3,7 @@ package belajar_java_reflection.data;
 import belajar_java_reflection.annotation.NotBlank;
 
 import java.io.Serializable;
+import java.util.List;
 
 public final class Person implements Nameable, Serializable {
 
@@ -11,6 +12,9 @@ public final class Person implements Nameable, Serializable {
 
     @NotBlank
     private String lastName;
+
+    private List<String> hobbies;
+
     private int age;
 
     public Person(String firstName, String lastName) {
@@ -19,6 +23,14 @@ public final class Person implements Nameable, Serializable {
     }
 
     public Person() {
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
     }
 
     public int getAge() {
