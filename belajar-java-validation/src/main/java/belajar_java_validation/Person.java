@@ -1,6 +1,8 @@
 package belajar_java_validation;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class Person {
@@ -13,7 +15,17 @@ public class Person {
     @NotBlank(message = "last name can't blank")
     private String lastName;
 
+    @NotNull(message = "address can't null")
+    @Valid
+    private Address address;
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
@@ -44,6 +56,7 @@ public class Person {
         return "Person{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", address=" + address +
                 '}';
     }
 }
