@@ -1,6 +1,7 @@
 package belajar_java_validation;
 
 import belajar_java_validation.constraint.CheckCase;
+import belajar_java_validation.constraint.CheckOrderId;
 import belajar_java_validation.enums.CaseMode;
 import belajar_java_validation.group.CreditCardPaymentGroup;
 import belajar_java_validation.group.VirtualAccountPaymentGroup;
@@ -16,12 +17,7 @@ import org.hibernate.validator.constraints.Range;
 
 public class Payment {
 
-    @CheckCase(groups = {CreditCardPaymentGroup.class, VirtualAccountPaymentGroup.class},
-                mode = CaseMode.UPPER, message = "{order.id.upper}")
-    @NotBlank(groups = {CreditCardPaymentGroup.class, VirtualAccountPaymentGroup.class},
-            message = "{order.id.notblank}")
-    @Size(groups = {CreditCardPaymentGroup.class, VirtualAccountPaymentGroup.class},
-            min = 1, max = 10, message = "{order.id.size}")
+    @CheckOrderId(groups = {CreditCardPaymentGroup.class, VirtualAccountPaymentGroup.class})
     private String orderId;
 
     @Range(groups = {CreditCardPaymentGroup.class, VirtualAccountPaymentGroup.class},
