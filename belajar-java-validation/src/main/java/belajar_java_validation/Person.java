@@ -5,7 +5,11 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+import java.util.List;
+
 public class Person {
+
+    private List<@NotBlank(message = "hobby can not blank") String> hobbies;
 
     @Size(max = 20, message = "first name length max must 20 characters")
     @NotBlank(message = "first name can't blank")
@@ -42,6 +46,14 @@ public class Person {
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
     }
 
     public void setFirstName(String firstName) {
