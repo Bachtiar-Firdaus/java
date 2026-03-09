@@ -58,5 +58,11 @@ public abstract class AbstractValidatorTest {
             System.out.println("===============");
         }
     }
+    void validateWithException(Object o) {
+        Set<ConstraintViolation<Object>> violations = validator.validate(o);
+        if (!violations.isEmpty()) {
+            throw new ConstraintViolationException(violations);
+        }
+    }
 
 }
