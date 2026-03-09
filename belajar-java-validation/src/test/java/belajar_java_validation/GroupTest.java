@@ -12,7 +12,7 @@ public class GroupTest extends AbstractValidatorTest{
         payment.setOrderId("0111");
         payment.setAmount(20_000L);
         payment.setCreditCard("123");
-        
+
         validateWithGroups(payment, CreditCardPaymentGroup.class);
 
     }
