@@ -13,10 +13,13 @@ public abstract class AbstractValidatorTest {
 
     protected Validator validator;
 
+    protected ExecutableValidator executableValidator;
+
     @BeforeEach
     void setUp() {
         validatorFactory = Validation.buildDefaultValidatorFactory();
         validator = validatorFactory.getValidator();
+        executableValidator = validator.forExecutables();
     }
 
     @AfterEach
