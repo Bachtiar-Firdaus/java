@@ -1,4 +1,4 @@
-package belajar_java_logging;
+package belajar_java_logging.logging;
 
 
 import org.junit.jupiter.api.Test;
