@@ -1,2 +1,80 @@
 2026-03-09 20:37:26.440 [main] ERROR b.contoh.ContohTest - [] - Contoh
 2026-03-09 20:37:26.441 [main] INFO  b.contoh.ContohTest - [] - Contoh Info
+2026-03-09 20:41:11.060 [main] INFO  b.logging.LevelTest - [] - Info
+2026-03-09 20:41:11.061 [main] WARN  b.logging.LevelTest - [] - Warning
+2026-03-09 20:41:11.061 [main] ERROR b.logging.LevelTest - [] - Error
+2026-03-09 20:41:32.494 [main] WARN  b.logging.LevelTest - [] - Warning
+2026-03-09 20:41:32.495 [main] ERROR b.logging.LevelTest - [] - Error
+2026-03-09 20:42:02.397 [main] TRACE b.logging.LevelTest - [] - Trace
+2026-03-09 20:42:02.398 [main] DEBUG b.logging.LevelTest - [] - Debug
+2026-03-09 20:42:02.398 [main] INFO  b.logging.LevelTest - [] - Info
+2026-03-09 20:42:02.398 [main] WARN  b.logging.LevelTest - [] - Warning
+2026-03-09 20:42:02.398 [main] ERROR b.logging.LevelTest - [] - Error
+2026-03-09 20:42:21.382 [main] TRACE b.logging.LevelTest - [] - Trace
+2026-03-09 20:42:21.383 [main] DEBUG b.logging.LevelTest - [] - Debug
+2026-03-09 20:42:21.383 [main] INFO  b.logging.LevelTest - [] - Info
+2026-03-09 20:42:21.383 [main] WARN  b.logging.LevelTest - [] - Warning
+2026-03-09 20:42:21.383 [main] ERROR b.logging.LevelTest - [] - Error
+2026-03-09 20:45:14.230 [main] TRACE b.logging.LevelTest - [] - Trace
+2026-03-09 20:45:14.231 [main] DEBUG b.logging.LevelTest - [] - Debug
+2026-03-09 20:45:14.231 [main] INFO  b.logging.LevelTest - [] - Info
+2026-03-09 20:45:14.231 [main] WARN  b.logging.LevelTest - [] - Warning
+2026-03-09 20:45:14.231 [main] ERROR b.logging.LevelTest - [] - Error
+2026-03-09 20:45:52.946 [main] TRACE b.logging.LevelTest - [] - Trace
+2026-03-09 20:45:52.947 [main] DEBUG b.logging.LevelTest - [] - Debug
+2026-03-09 20:45:52.947 [main] INFO  b.logging.LevelTest - [] - Info
+2026-03-09 20:45:52.947 [main] WARN  b.logging.LevelTest - [] - Warning
+2026-03-09 20:45:52.947 [main] ERROR b.logging.LevelTest - [] - Error
+2026-03-09 20:46:01.669 [main] TRACE b.logging.LevelTest - [] - Trace
+2026-03-09 20:46:01.670 [main] DEBUG b.logging.LevelTest - [] - Debug
+2026-03-09 20:46:01.670 [main] INFO  b.logging.LevelTest - [] - Info
+2026-03-09 20:46:01.671 [main] WARN  b.logging.LevelTest - [] - Warning
+2026-03-09 20:46:01.671 [main] ERROR b.logging.LevelTest - [] - Error
+2026-03-09 21:04:30.422 [main] INFO  b.logging.MyController - [] - 0164fd81-73cb-45cb-9760-ceb106a93204 - Controller Save
+2026-03-09 21:04:30.424 [main] INFO  b.logging.MyService - [] - 0164fd81-73cb-45cb-9760-ceb106a93204 - Service Save
+2026-03-09 21:04:30.424 [main] INFO  b.logging.MyRepository - [] - 0164fd81-73cb-45cb-9760-ceb106a93204 - Repository Save
+2026-03-09 21:07:00.421 [main] INFO  b.logging.MyController - [06d7231c-ae40-44b6-97ea-0b7d3e4f3f21] - 06d7231c-ae40-44b6-97ea-0b7d3e4f3f21 - Controller Save
+2026-03-09 21:07:00.421 [main] INFO  b.logging.MyService - [06d7231c-ae40-44b6-97ea-0b7d3e4f3f21] - 06d7231c-ae40-44b6-97ea-0b7d3e4f3f21 - Service Save
+2026-03-09 21:07:00.421 [main] INFO  b.logging.MyRepository - [06d7231c-ae40-44b6-97ea-0b7d3e4f3f21] - 06d7231c-ae40-44b6-97ea-0b7d3e4f3f21 - Repository Save
+2026-03-09 21:12:51.291 [main] INFO  b.logging.MyController - [234a081e-0676-4fbc-a22b-0e6298eaff38] - Controller Save
+2026-03-09 21:12:51.291 [main] INFO  b.logging.MyService - [234a081e-0676-4fbc-a22b-0e6298eaff38] - Service Save
+2026-03-09 21:12:51.291 [main] INFO  b.logging.MyRepository - [234a081e-0676-4fbc-a22b-0e6298eaff38] - Repository Save
+2026-03-09 21:13:58.710 [Thread-2] INFO  b.logging.MyController - [85258187-9022-4737-b36c-2f7f575743b1] - Controller Save
+2026-03-09 21:13:58.710 [Thread-7] INFO  b.logging.MyController - [27df4896-dbc3-483d-82d2-a38c163ddb1f] - Controller Save
+2026-03-09 21:13:58.710 [Thread-4] INFO  b.logging.MyController - [60369f6a-10a6-43f7-9eb3-cfea8190a291] - Controller Save
+2026-03-09 21:13:58.710 [Thread-2] INFO  b.logging.MyService - [85258187-9022-4737-b36c-2f7f575743b1] - Service Save
+2026-03-09 21:13:58.710 [Thread-9] INFO  b.logging.MyController - [a7affc21-6bc7-4830-ad9f-18c4857ab736] - Controller Save
+2026-03-09 21:13:58.710 [Thread-3] INFO  b.logging.MyController - [aaedcbff-c06f-436c-9e26-5589b1f60570] - Controller Save
+2026-03-09 21:13:58.710 [Thread-1] INFO  b.logging.MyController - [e50012e9-cc2a-48fc-bf10-ac6781f531b2] - Controller Save
+2026-03-09 21:13:58.710 [Thread-5] INFO  b.logging.MyController - [7449c404-32e8-4650-8e6f-696a18588d4d] - Controller Save
+2026-03-09 21:13:58.710 [Thread-6] INFO  b.logging.MyController - [66c3237b-1725-4464-b7be-f6034d687c9e] - Controller Save
+2026-03-09 21:13:58.710 [Thread-8] INFO  b.logging.MyController - [60512123-d931-46e2-92cb-73fdb735bb13] - Controller Save
+2026-03-09 21:13:58.710 [Thread-1] INFO  b.logging.MyService - [e50012e9-cc2a-48fc-bf10-ac6781f531b2] - Service Save
+2026-03-09 21:13:58.710 [Thread-8] INFO  b.logging.MyService - [60512123-d931-46e2-92cb-73fdb735bb13] - Service Save
+2026-03-09 21:13:58.710 [Thread-0] INFO  b.logging.MyController - [700312fc-57be-4dfa-9d70-fcddb8f1dcd6] - Controller Save
+2026-03-09 21:13:58.710 [Thread-1] INFO  b.logging.MyRepository - [e50012e9-cc2a-48fc-bf10-ac6781f531b2] - Repository Save
+2026-03-09 21:13:58.710 [Thread-9] INFO  b.logging.MyService - [a7affc21-6bc7-4830-ad9f-18c4857ab736] - Service Save
+2026-03-09 21:13:58.710 [Thread-2] INFO  b.logging.MyRepository - [85258187-9022-4737-b36c-2f7f575743b1] - Repository Save
+2026-03-09 21:13:58.710 [Thread-7] INFO  b.logging.MyService - [27df4896-dbc3-483d-82d2-a38c163ddb1f] - Service Save
+2026-03-09 21:13:58.710 [Thread-4] INFO  b.logging.MyService - [60369f6a-10a6-43f7-9eb3-cfea8190a291] - Service Save
+2026-03-09 21:13:58.710 [Thread-3] INFO  b.logging.MyService - [aaedcbff-c06f-436c-9e26-5589b1f60570] - Service Save
+2026-03-09 21:13:58.710 [Thread-4] INFO  b.logging.MyRepository - [60369f6a-10a6-43f7-9eb3-cfea8190a291] - Repository Save
+2026-03-09 21:13:58.710 [Thread-5] INFO  b.logging.MyService - [7449c404-32e8-4650-8e6f-696a18588d4d] - Service Save
+2026-03-09 21:13:58.710 [Thread-6] INFO  b.logging.MyService - [66c3237b-1725-4464-b7be-f6034d687c9e] - Service Save
+2026-03-09 21:13:58.710 [Thread-8] INFO  b.logging.MyRepository - [60512123-d931-46e2-92cb-73fdb735bb13] - Repository Save
+2026-03-09 21:13:58.710 [Thread-0] INFO  b.logging.MyService - [700312fc-57be-4dfa-9d70-fcddb8f1dcd6] - Service Save
+2026-03-09 21:13:58.710 [Thread-9] INFO  b.logging.MyRepository - [a7affc21-6bc7-4830-ad9f-18c4857ab736] - Repository Save
+2026-03-09 21:13:58.710 [Thread-3] INFO  b.logging.MyRepository - [aaedcbff-c06f-436c-9e26-5589b1f60570] - Repository Save
+2026-03-09 21:13:58.710 [Thread-0] INFO  b.logging.MyRepository - [700312fc-57be-4dfa-9d70-fcddb8f1dcd6] - Repository Save
+2026-03-09 21:13:58.710 [Thread-7] INFO  b.logging.MyRepository - [27df4896-dbc3-483d-82d2-a38c163ddb1f] - Repository Save
+2026-03-09 21:13:58.710 [Thread-5] INFO  b.logging.MyRepository - [7449c404-32e8-4650-8e6f-696a18588d4d] - Repository Save
+2026-03-09 21:13:58.710 [Thread-6] INFO  b.logging.MyRepository - [66c3237b-1725-4464-b7be-f6034d687c9e] - Repository Save
+2026-03-09 21:14:20.317 [Thread-1] INFO  b.logging.MyController - [38761f83-0b2d-458a-b270-dfc96daff85b] - Controller Save
+2026-03-09 21:14:20.317 [Thread-2] INFO  b.logging.MyController - [4cadba8a-db9f-4c6a-b1c2-36a6388b8ee3] - Controller Save
+2026-03-09 21:14:20.317 [Thread-0] INFO  b.logging.MyController - [8e114773-1d95-4083-8a5b-4a3c6ac41ada] - Controller Save
+2026-03-09 21:14:20.318 [Thread-2] INFO  b.logging.MyService - [4cadba8a-db9f-4c6a-b1c2-36a6388b8ee3] - Service Save
+2026-03-09 21:14:20.318 [Thread-0] INFO  b.logging.MyService - [8e114773-1d95-4083-8a5b-4a3c6ac41ada] - Service Save
+2026-03-09 21:14:20.318 [Thread-1] INFO  b.logging.MyService - [38761f83-0b2d-458a-b270-dfc96daff85b] - Service Save
+2026-03-09 21:14:20.318 [Thread-0] INFO  b.logging.MyRepository - [8e114773-1d95-4083-8a5b-4a3c6ac41ada] - Repository Save
+2026-03-09 21:14:20.318 [Thread-2] INFO  b.logging.MyRepository - [4cadba8a-db9f-4c6a-b1c2-36a6388b8ee3] - Repository Save
+2026-03-09 21:14:20.318 [Thread-1] INFO  b.logging.MyRepository - [38761f83-0b2d-458a-b270-dfc96daff85b] - Repository Save
