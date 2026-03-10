@@ -10,6 +10,7 @@ import java.util.Scanner;
 //@Slf4j
 public class FileHelper {
 
+    // ini unuk mengakali try catch SneakyThrows
     @SneakyThrows
     public static String loadFile(String file) {
 //        log.info("Load file {}", file);

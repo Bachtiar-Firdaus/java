@@ -13,10 +13,10 @@ public class FileHelperTest {
         System.out.println(text);
     }
 
-//    @Test
-//    void testFileNotFound() {
-//        Assertions.assertThrows(FileNotFoundException.class, () -> {
-//            FileHelper.loadFile("tidakada.txt");
-//        });
-//    }
+    @Test
+    void testFileNotFound() {
+        Assertions.assertThrows(FileNotFoundException.class, () -> {
+            FileHelper.loadFile("tidakada.txt");
+        });
+    }
 }
