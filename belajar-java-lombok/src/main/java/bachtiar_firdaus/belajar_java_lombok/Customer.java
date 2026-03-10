@@ -1,14 +1,14 @@
 package bachtiar_firdaus.belajar_java_lombok;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(exclude = {
+        "name"
+})
 public class Customer {
 
     private String id;
