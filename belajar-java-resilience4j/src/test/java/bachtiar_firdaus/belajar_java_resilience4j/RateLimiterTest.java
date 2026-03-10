@@ -29,4 +29,24 @@ public class RateLimiterTest {
         }
     }
 
+    @Test
+    void testRateLimiterConfig() {
+        RateLimiterConfig config = RateLimiterConfig.custom()
+                .limitForPeriod(100)
+                .limitRefreshPeriod(Duration.ofMinutes(1))
+                .timeoutDuration(Duration.ofSeconds(2))
+                .build();
+
+        RateLimiter rateLimiter = RateLimiter.of("pzn", config);
+
+        for (int i = 0; i < 10_000; i++) {
+            Runnable runnable = RateLimiter.decorateRunnable(rateLimiter, () -> {
+                long result = counter.incrementAndGet();
+                log.info("Result: {}", result);
+            });
+
+            runnable.run();
+        }
+    }
+
 }
