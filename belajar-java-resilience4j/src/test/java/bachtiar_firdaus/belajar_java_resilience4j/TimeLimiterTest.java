@@ -34,5 +34,20 @@ public class TimeLimiterTest {
         callable.call();
     }
 
+    @Test
+    void timeLimiterConfig() throws Exception {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Future<String> future = executorService.submit(() -> slow());
+
+        TimeLimiterConfig config = TimeLimiterConfig.custom()
+                .timeoutDuration(Duration.ofSeconds(10))
+                .cancelRunningFuture(true)
+                .build();
+
+        TimeLimiter timeLimiter = TimeLimiter.of("pzn", config);
+        Callable<String> callable = TimeLimiter.decorateFutureSupplier(timeLimiter, () -> future);
+
+        callable.call();
+    }
 
 }
