@@ -29,4 +29,31 @@ public class JavaBeanTest {
         System.out.println(json);
     }
 
+    @Test
+    void readObjectFromJson() throws JsonProcessingException {
+        String json = """
+                {
+                  "id": "1",
+                  "name": "Daus",
+                  "hobbies": [
+                    "Coding",
+                    "Reading"
+                  ],
+                  "address": {
+                    "street": "Jalan belum jadi",
+                    "city": "Jakarta",
+                    "country": "Indonesia"
+                  }
+                }
+                """;
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        Person person = objectMapper.readValue(json, Person.class);
+
+        Assertions.assertEquals("1", person.getId());
+        Assertions.assertEquals("Daus", person.getName());
+        Assertions.assertEquals("Jalan belum jadi", person.getAddress().getStreet());
+        Assertions.assertEquals("Jakarta", person.getAddress().getCity());
+        Assertions.assertEquals("Indonesia", person.getAddress().getCountry());
+    }
 }
