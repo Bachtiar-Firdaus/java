@@ -1,11 +1,13 @@
 {
+  "id": "1",
+  "name": "Daus",
+  "hobbies": [
+    "Coding",
+    "Reading"
+  ],
   "address": {
+    "street": "Jalan belum jadi",
     "city": "Jakarta",
-    "country": "Indonesia",
-    "street": "Jalan belum ada"
-  },
-  "firstName": "Budi",
-  "lastName": "Nugraha",
-  "married": true,
-  "age": 30
+    "country": "Indonesia"
+  }
 }
