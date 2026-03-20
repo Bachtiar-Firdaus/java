@@ -32,5 +32,15 @@ public class EventPublisherTest {
         throw new IllegalArgumentException("Ups");
     }
 
+    @Test
+    void registry() {
+        RetryRegistry registry = RetryRegistry.ofDefaults();
+        registry.getEventPublisher().onEntryAdded(event -> {
+            log.info("Add new entry {}", event.getAddedEntry().getName());
+        });
 
+        registry.retry("pzn");
+        registry.retry("pzn");
+        registry.retry("pzn2");
+    }
 }
