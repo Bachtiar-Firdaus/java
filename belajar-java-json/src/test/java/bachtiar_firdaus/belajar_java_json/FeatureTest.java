@@ -45,5 +45,25 @@ public class FeatureTest {
         Assertions.assertEquals(List.of("Coding"), person.getHobbies());
     }
 
+    @Test
+    void serializationFeature() throws JsonProcessingException {
+        Person person = new Person();
+        person.setId("1");
+        person.setName("Daus");
+        person.setHobbies(List.of("Coding", "Reading"));
+
+        Address address = new Address();
+        address.setStreet("Jalan belum jadi");
+        address.setCity("Jakarta");
+        address.setCountry("Indonesia");
+        person.setAddress(address);
+
+        ObjectMapper objectMapper = new ObjectMapper()
+                .configure(SerializationFeature.INDENT_OUTPUT, true);
+        String json = objectMapper.writeValueAsString(person);
+
+        System.out.println(json);
+    }
+
 
 }
