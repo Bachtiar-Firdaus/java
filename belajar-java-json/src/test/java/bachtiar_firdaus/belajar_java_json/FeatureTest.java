@@ -65,5 +65,16 @@ public class FeatureTest {
         System.out.println(json);
     }
 
+    @Test
+    void serializationInclusion() throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper()
+                .setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
+        Person person = new Person();
+        person.setId("1");
+        person.setName("Daus");
+
+        String json = objectMapper.writeValueAsString(person);
+        System.out.println(json);
+    }
 }
