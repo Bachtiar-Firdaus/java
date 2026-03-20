@@ -1,13 +1,9 @@
 {
   "id": "1",
   "name": "Daus",
-  "hobbies": [
-    "Coding",
-    "Reading"
-  ],
-  "address": {
-    "street": "Jalan belum jadi",
-    "city": "Jakarta",
-    "country": "Indonesia"
-  }
+  "hobbies": null,
+  "address": null,
+  "createdAt": "2026-03-20 15:41:22",
+  "updatedAt": "2026-03-20",
+  "full_name": "Bachtiar Firdaus"
 }
