@@ -50,4 +50,22 @@ public class TimeLimiterTest {
         callable.call();
     }
 
+    @Test
+    void timeLimiterRegistry() throws Exception {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Future<String> future = executorService.submit(() -> slow());
+
+        TimeLimiterConfig config = TimeLimiterConfig.custom()
+                .timeoutDuration(Duration.ofSeconds(10))
+                .cancelRunningFuture(true)
+                .build();
+
+        TimeLimiterRegistry registry = TimeLimiterRegistry.ofDefaults();
+        registry.addConfiguration("config", config);
+
+        TimeLimiter timeLimiter = registry.timeLimiter("pzn", "config");
+        Callable<String> callable = TimeLimiter.decorateFutureSupplier(timeLimiter, () -> future);
+
+        callable.call();
+    }
 }
