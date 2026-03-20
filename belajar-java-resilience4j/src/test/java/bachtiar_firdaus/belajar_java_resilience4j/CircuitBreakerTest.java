@@ -49,4 +49,27 @@ public class CircuitBreakerTest {
         }
     }
 
+    @Test
+    void circuitBreakerRegistry() {
+        CircuitBreakerConfig config = CircuitBreakerConfig.custom()
+                .slidingWindowType(CircuitBreakerConfig.SlidingWindowType.COUNT_BASED)
+                .failureRateThreshold(10f)
+                .slidingWindowSize(10)
+                .minimumNumberOfCalls(10)
+                .build();
+
+        CircuitBreakerRegistry registry = CircuitBreakerRegistry.ofDefaults();
+        registry.addConfiguration("config", config);
+
+        CircuitBreaker circuitBreaker = registry.circuitBreaker("pzn", "config");
+
+        for (int i = 0; i < 200; i++) {
+            try {
+                Runnable runnable = CircuitBreaker.decorateRunnable(circuitBreaker, () -> callMe());
+                runnable.run();
+            }catch (Exception e){
+                log.error("Error : {}", e.getMessage());
+            }
+        }
+    }
 }
