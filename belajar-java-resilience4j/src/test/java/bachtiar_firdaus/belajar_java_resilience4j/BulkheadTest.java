@@ -47,4 +47,42 @@ public class BulkheadTest {
         }
     }
 
+    @Test
+    void testSemaphoreConfig() throws InterruptedException {
+        BulkheadConfig config = BulkheadConfig.custom()
+                .maxConcurrentCalls(5)
+                .maxWaitDuration(Duration.ofSeconds(5))
+                .build();
+
+        Bulkhead bulkhead = Bulkhead.of("pzn", config);
+
+        for (int i = 0; i < 10; i++) {
+            Runnable runnable = Bulkhead.decorateRunnable(bulkhead, () -> slow());
+            new Thread(runnable).start();
+        }
+
+        Thread.sleep(10_000L);
+    }
+
+    @Test
+    void testThreadPoolConfig() throws InterruptedException {
+        ThreadPoolBulkheadConfig config = ThreadPoolBulkheadConfig.custom()
+                .maxThreadPoolSize(5)
+                .coreThreadPoolSize(5)
+                .queueCapacity(20)
+                .build();
+
+        log.info(String.valueOf(Runtime.getRuntime().availableProcessors()));
+
+        ThreadPoolBulkhead bulkhead = ThreadPoolBulkhead.of("pzn", config);
+
+        for (int i = 0; i < 20; i++) {
+            Supplier<CompletionStage<Void>> supplier = ThreadPoolBulkhead.decorateRunnable(bulkhead, () -> slow());
+            supplier.get();
+        }
+
+        Thread.sleep(10_000L);
+    }
+
+
 }
