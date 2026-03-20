@@ -28,4 +28,18 @@ public class CSVTest {
         System.out.println(csv);
     }
 
+    @Test
+    void readCSV() throws IOException {
+        Path path = Path.of("sample.csv");
+        Reader reader = Files.newBufferedReader(path);
+
+        CSVParser parser = new CSVParser(reader, CSVFormat.DEFAULT);
+        for (CSVRecord record : parser) {
+            System.out.println("First Name : " + record.get(0));
+            System.out.println("Last Name : " + record.get(1));
+            System.out.println("Value : " + record.get(2));
+        }
+    }
+
+
 }
