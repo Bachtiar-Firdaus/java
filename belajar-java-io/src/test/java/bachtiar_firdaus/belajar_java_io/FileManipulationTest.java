@@ -21,5 +21,14 @@ public class FileManipulationTest {
         Assertions.assertFalse(Files.exists(path));
     }
 
+    @Test
+    void directoryManipulation() throws IOException {
+        Path path = Path.of("contoh");
+        Files.createDirectory(path);
+        Assertions.assertTrue(Files.isDirectory(path));
+        Assertions.assertTrue(Files.exists(path));
 
+        Files.delete(path);
+        Assertions.assertFalse(Files.exists(path));
+    }
 }
