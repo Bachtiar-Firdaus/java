@@ -11,6 +11,7 @@
         <!-- Entity Classes -->
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Customer</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Category</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Image</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
