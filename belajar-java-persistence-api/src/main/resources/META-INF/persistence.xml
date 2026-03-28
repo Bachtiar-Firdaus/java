@@ -22,6 +22,9 @@
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Employee</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Manager</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.VicePresident</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Payment</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.PaymentCreditCard</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.PaymentGopay</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
