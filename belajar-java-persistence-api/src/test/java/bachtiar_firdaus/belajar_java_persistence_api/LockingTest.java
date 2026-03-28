@@ -65,5 +65,38 @@ public class LockingTest {
         entityTransaction.commit();
         entityManager.close();
     }
-    
+
+    @Test
+    void pessimisticLockingDemo1() throws InterruptedException {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        Brand brand = entityManager.find(Brand.class, "nokia", LockModeType.PESSIMISTIC_WRITE);
+        brand.setName("Nokia Demo 1");
+        brand.setUpdatedAt(LocalDateTime.now());
+
+        Thread.sleep(10 * 1000L);
+        entityManager.persist(brand);
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
+    @Test
+    void pessimisticLockingDemo2() throws InterruptedException {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        Brand brand = entityManager.find(Brand.class, "nokia", LockModeType.PESSIMISTIC_WRITE);
+        brand.setName("Nokia Demo 2");
+        brand.setUpdatedAt(LocalDateTime.now());
+        entityManager.persist(brand);
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
 }
