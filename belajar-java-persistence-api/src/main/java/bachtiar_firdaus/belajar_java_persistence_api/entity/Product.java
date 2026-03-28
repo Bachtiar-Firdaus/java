@@ -22,6 +22,17 @@ public class Product {
     @JoinColumn(name = "brand_id", referencedColumnName = "id")
     private Brand brand;
 
+    @ManyToMany(mappedBy = "likes")
+    private Set<User> likedBy;
+
+    public Set<User> getLikedBy() {
+        return likedBy;
+    }
+
+    public void setLikedBy(Set<User> likedBy) {
+        this.likedBy = likedBy;
+    }
+
     public String getId() {
         return id;
     }

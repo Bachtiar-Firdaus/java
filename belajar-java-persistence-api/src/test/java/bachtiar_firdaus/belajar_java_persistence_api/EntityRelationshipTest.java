@@ -120,4 +120,46 @@ public class EntityRelationshipTest {
         entityManager.close();
     }
 
+    @Test
+    void manyToManyInsert() {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        User user = entityManager.find(User.class, "bachtiar");
+        user.setLikes(new HashSet<>());
+
+        Product product1 = entityManager.find(Product.class, "p1");
+        Product product2 = entityManager.find(Product.class, "p2");
+
+        user.getLikes().add(product1);
+        user.getLikes().add(product2);
+
+        entityManager.merge(user);
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
+    @Test
+    void manyToManyUpdate() {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        User user = entityManager.find(User.class, "bachtiar");
+        Product product = null;
+        for (Product item : user.getLikes()) {
+            product = item;
+            break;
+        }
+
+        user.getLikes().remove(product);
+        entityManager.merge(user);
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
 }
