@@ -25,6 +25,9 @@
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Payment</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.PaymentCreditCard</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.PaymentGopay</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Transaction</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.TransactionCredit</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.TransactionDebit</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
