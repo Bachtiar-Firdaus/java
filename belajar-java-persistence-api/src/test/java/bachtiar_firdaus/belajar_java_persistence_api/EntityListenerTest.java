@@ -31,5 +31,17 @@ public class EntityListenerTest {
         entityManager.close();
     }
 
+    @Test
+    void listenerEntity() {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
 
+        Member member = entityManager.find(Member.class, 1);
+        Assertions.assertEquals("Mr. daus bachtiar firdaus", member.getFullName());
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
 }
