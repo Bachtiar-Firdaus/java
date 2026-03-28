@@ -17,6 +17,8 @@
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Credential</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.User</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Wallet</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Brand</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Product</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
