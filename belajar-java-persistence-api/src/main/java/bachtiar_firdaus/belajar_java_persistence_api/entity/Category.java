@@ -1,5 +1,6 @@
 package bachtiar_firdaus.belajar_java_persistence_api.entity;
 
+import bachtiar_firdaus.belajar_java_persistence_api.listener.UpdatedAtListener;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -7,11 +8,14 @@ import java.util.Calendar;
 
 @Entity
 @Table(name = "categories")
-public class Category {
+@EntityListeners({
+        UpdatedAtListener.class
+})
+public class Category implements UpdatedAtAware{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private String id;
 
     private String name;
 
@@ -40,11 +44,11 @@ public class Category {
         this.updatedAt = updatedAt;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
