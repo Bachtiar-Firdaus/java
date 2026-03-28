@@ -6,3 +6,5 @@ http://localhost:8080/belajar/hello
 
 Undeploy
 delete folder hasil ekstak dan file warnya
+
+http://localhost:8080/unsafe?name=bachtiar&sleep=1000
