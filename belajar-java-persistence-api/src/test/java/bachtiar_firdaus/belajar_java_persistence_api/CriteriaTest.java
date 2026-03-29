@@ -140,5 +140,34 @@ public class CriteriaTest {
         entityManager.close();
     }
 
+    @Test
+    void criteriaJoinClause() {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Product> criteria = builder.createQuery(Product.class);
+        Root<Product> p = criteria.from(Product.class);
+        Join<Product, Brand> b = p.join("brand");
+
+        // select p from Product p join p.brand b
+        criteria.select(p);
+        criteria.where(
+                builder.equal(b.get("name"), "Xiaomi")
+        );
+        // select p from Product p join p.brand b where b.name = 'Samsung'
+
+        TypedQuery<Product> query = entityManager.createQuery(criteria);
+        List<Product> products = query.getResultList();
+        for (Product product : products) {
+            System.out.println(product.getId() + " : " + product.getName());
+        }
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
 
 }
