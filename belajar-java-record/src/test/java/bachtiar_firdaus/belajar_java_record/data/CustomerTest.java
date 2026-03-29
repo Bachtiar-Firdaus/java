@@ -23,4 +23,24 @@ class CustomerTest {
         assertEquals("daus@localhost", customer.email());
         assertEquals("082131231", customer.phone());
     }
+
+    @Test
+    void constructor() {
+        var customer = new Customer("1", "Daus", "daus@localhost");
+        assertNotNull(customer);
+        assertEquals("1", customer.id());
+        assertEquals("Daus", customer.name());
+        assertEquals("daus@localhost", customer.email());
+        assertNull(customer.phone());
+    }
+
+    @Test
+    void canonicalConstructor() {
+        var customer = new Customer("1", "Daus", "DAUS@LOCALHOST");
+        assertNotNull(customer);
+        assertEquals("1", customer.id());
+        assertEquals("Daus", customer.name());
+        assertEquals("daus@localhost", customer.email());
+        assertNull(customer.phone());
+    }
 }
