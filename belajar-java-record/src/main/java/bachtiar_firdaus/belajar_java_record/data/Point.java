@@ -1,6 +1,8 @@
 package bachtiar_firdaus.belajar_java_record.data;
 
-public record Point(int x, int y) {
+import bachtiar_firdaus.belajar_java_record.annotation.Valid;
+
+public record Point(@Valid int x, @Valid int y) {
 
     public Point{
         System.out.println("Create Point");
