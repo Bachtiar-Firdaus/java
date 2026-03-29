@@ -28,6 +28,7 @@
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.Transaction</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.TransactionCredit</class>
         <class>bachtiar_firdaus.belajar_java_persistence_api.entity.TransactionDebit</class>
+        <class>bachtiar_firdaus.belajar_java_persistence_api.entity.SimpleBrand</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
