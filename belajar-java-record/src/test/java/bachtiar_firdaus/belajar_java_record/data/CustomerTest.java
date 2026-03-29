@@ -43,4 +43,10 @@ class CustomerTest {
         assertEquals("daus@localhost", customer.email());
         assertNull(customer.phone());
     }
+
+    @Test
+    void recordMethod() {
+        var customer = new Customer("1", "Daus", "DAUS@LOCALHOST");
+        assertEquals("Hello Budi, my name is Daus", customer.sayHello("Budi"));
+    }
 }
