@@ -254,6 +254,43 @@ public class JpaQueryLangaugeTest {
         entityManager.close();
     }
 
+    @Test
+    void nativeQuery() {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        Query query = entityManager.createNativeQuery(
+                "select * from brands where brands.created_at is not null", Brand.class);
+        List<Brand> brands = query.getResultList();
+
+        for (Brand brand : brands) {
+            System.out.println(brand.getId() + " : " + brand.getName());
+        }
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
+    @Test
+    void namedNativeQuery() {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        Query query = entityManager.createNamedQuery("Brand.native.findAll", Brand.class);
+        List<Brand> brands = query.getResultList();
+
+        for (Brand brand : brands) {
+            System.out.println(brand.getId() + " : " + brand.getName());
+        }
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
 
 
 }
