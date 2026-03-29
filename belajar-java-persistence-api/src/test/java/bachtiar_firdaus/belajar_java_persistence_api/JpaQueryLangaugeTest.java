@@ -53,4 +53,48 @@ public class JpaQueryLangaugeTest {
         entityManager.close();
     }
 
+    @Test
+    void joinClause() {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        TypedQuery<Product> query = entityManager.createQuery(
+                "select p from Product p join p.brand b where b.name = :brand", Product.class);
+        query.setParameter("brand", "Samsung");
+
+        List<Product> products = query.getResultList();
+        for (Product product : products) {
+            System.out.println(product.getId() + " : " +
+                    product.getName() + " : " + product.getBrand().getName());
+        }
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
+    @Test
+    void joinFetchClause() {
+        EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        TypedQuery<User> query = entityManager.createQuery(
+                "select u from User u join fetch u.likes p where p.name = :product", User.class);
+        query.setParameter("product", "Samsung Galaxy 1");
+
+        List<User> users = query.getResultList();
+        for (User user : users) {
+            System.out.println("User: " + user.getName());
+            for (Product product : user.getLikes()) {
+                System.out.println("Product: " + product.getName());
+            }
+        }
+
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
 }
